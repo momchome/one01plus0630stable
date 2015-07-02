@@ -110,7 +110,7 @@
                         <a href="<?php echo U('Article/lists?category='.get_category_name($article['category_id']));?>"><?php echo (get_category_title($article["category_id"])); ?></a></span> ( 阅读：<?php echo ($article["view"]); ?> )
                     </span><br/><br/>
 					a1b2c3
-					<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; echo ($vo["id"]); ?>-<?php echo ($vo["title"]); ?>-<?php echo ($vo["content"]); ?><br/><?php endforeach; endif; else: echo "" ;endif; ?>
+					<?php if(is_array($data)): $i = 0; $__LIST__ = $data;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$vo): $mod = ($i % 2 );++$i; echo ($vo["id"]); ?>-<?php echo ($vo["title"]); ?>-<?php echo ($vo["servicetype"]); ?>-<?php echo ($vo["servicestatus"]); ?>-<?php echo ($vo["servicetime"]); ?><br/><?php endforeach; endif; else: echo "" ;endif; ?>
 					
                 </div>
                 <hr/><?php endforeach; endif; else: echo "" ;endif; ?>
