@@ -26,20 +26,20 @@ class FormController extends Controller{
     }//public function insert(
 	
 	public function rea1d($id=0){
-    $Data = M('think01form');	//M('Data'); // 实例化Data数据模型
+    $Data = M('think01form2');	//M('Data'); // 实例化Data数据模型
         $this->data = $Data->select();
         $this->display();
  }
 
 	//
 	public function edit($id=0){
-    $Form   =   M('think01form');
+    $Form   =   M('think01form2');
     $this->assign('vo',$Form->find($id));
     $this->display();
  } //public function edit($id=0
  
  public function update(){
-    $Form   =   D('think01form');
+    $Form   =   D('think01form2');
     if($Form->create()) {
         $result =   $Form->save();
         if($result) {
@@ -63,7 +63,7 @@ class FormController extends Controller{
 			{$this->error("您不是技工,以技工身份登录,或注册技工才能FormController.class.php接单Form哦!");
 			//$this->display();
 			}     
-    $Form   =   M('think01form');
+    $Form   =   M('think01form2');
     $this->assign('vo',$Form->find($id));
     $this->display();
  } //public function edit($id=0

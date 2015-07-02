@@ -41,14 +41,14 @@
 					a1b2c3
 					<volist name="data" id="vo">
     <!-- {$vo.id}-{$vo.title}-{$vo.content}<a =href":U('Home/form/edit01tech/id/'.$vo.id}">接此单</a><br/> -->
-						{$vo.id}-{$vo.title}-{$vo.content}<a href=Home/form/edit01tech/id/{$vo.id}>接此单</a><br/>
+						{$vo.id}-{$vo.title}-{$vo.description}<a href=Home/form/edit01tech/id/{$vo.id}>接此单</a><br/>
 					</volist>
 <!--//----------------   -->
 <!--					<FORM method="post" action="__URL__/update">		-->
 					<FORM method="post" action="__URL__/inde01edit03tech02update" >
 技工、管理公司接单界面：<br />
 标题：<INPUT type="text" name="title" value="{$vo.title}"><br/>
-内容：<TEXTAREA name="content" rows="5" cols="45">{$vo.content}</TEXTAREA><br/>
+内容：<TEXTAREA name="description" rows="5" cols="45">{$vo.description}</TEXTAREA><br/>
 <INPUT type="hidden" name="id" value="{$vo.id}">
 <INPUT type="submit" value="提交">
 </FORM>

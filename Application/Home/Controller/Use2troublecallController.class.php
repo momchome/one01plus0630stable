@@ -174,7 +174,7 @@ class Use2troublecallController extends HomeController {
 //            $data['password'] = I('post.password');
 
 //
-				$Form   =   D('think01form');
+				$Form   =   D('think01form2');
         if($Form->create()) {
             $result =   $Form->add();
             if($result) {
