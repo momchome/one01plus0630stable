@@ -59,7 +59,8 @@ class FormController extends Controller{
 		define('UID',is_login());
 		$check= $auth01->check(MODULE_NAME.'/'.CONTROLLER_NAME.'/'.ACTION_NAME, UID);
 			//dump($check);
-            if(false==$check) {$this->error("您不是技工,以技工身份登录,或注册技工才能接单哦!");
+            if(false==$check) 
+			{$this->error("您不是技工,以技工身份登录,或注册技工才能FormController.class.php接单Form哦!");
 			//$this->display();
 			}     
     $Form   =   M('think01form');
